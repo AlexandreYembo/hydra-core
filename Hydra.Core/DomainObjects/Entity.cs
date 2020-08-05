@@ -81,5 +81,7 @@ namespace Hydra.Core.DomainObjects
         public override int GetHashCode() => (GetType().GetHashCode() * 907) + Id.GetHashCode();
 
         public override string ToString() => $"{GetType().Name} [Id = {Id}]";
+
+        public abstract bool IsValid();
     }
 }
