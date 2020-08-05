@@ -14,6 +14,9 @@ namespace Hydra.Core.Messages
             TimeStamp = DateTime.Now;
         }
 
-        public abstract bool IsValid();
+        public virtual bool IsValid()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

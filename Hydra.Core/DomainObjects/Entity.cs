@@ -82,6 +82,6 @@ namespace Hydra.Core.DomainObjects
 
         public override string ToString() => $"{GetType().Name} [Id = {Id}]";
 
-        public abstract bool IsValid();
+        // public abstract bool IsValid();
     }
 }
