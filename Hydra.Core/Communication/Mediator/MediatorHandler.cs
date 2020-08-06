@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Hydra.Core.Messages;
 using MediatR;
 
-namespace Hydra.Core.Bus
+namespace Hydra.Core.Communication.Mediator
 {
     /// <summary>
     /// Wraper class that implements Mediator and will receive customization in the future.

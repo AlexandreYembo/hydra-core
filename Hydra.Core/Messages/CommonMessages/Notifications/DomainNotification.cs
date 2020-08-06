@@ -2,8 +2,9 @@ using System;
 using Hydra.Core.Messages;
 using MediatR;
 
-namespace Hydra.Core.DomainObjects
+namespace Hydra.Core.Messages.CommonMessages.Notifications
 {
+    //This class is not used for Event root, but it has same inherance of Message and INotification that are present in Event.cs
     public class DomainNotification : Message, INotification
     {
          public DateTime Timestamp { get; private set; }
