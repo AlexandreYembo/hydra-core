@@ -8,6 +8,11 @@ namespace Hydra.Core.DomainObjects
     {
         public Guid Id {get;set;}
 
+        /// <summary>
+        /// This list is used when persist object to Database, it will submit the event to:
+        /// 1- Could be a queue
+        /// 2- Could persist in another database
+        /// </summary>
         private List<Event> _notifications;
 
         public IReadOnlyCollection<Event> Notifications => _notifications?.AsReadOnly();
@@ -56,6 +61,11 @@ namespace Hydra.Core.DomainObjects
         /// <returns></returns>
         public static bool operator !=(Entity a, Entity b) => !(a == b);
 
+        /// <summary>
+        /// This event will be sent during the UnitofWork commit
+        /// If the commit returns true, the event will triggered
+        /// </summary>
+        /// <param name="eventItem"></param>
         public void AddEvent(Event eventItem)
         {
             _notifications = _notifications ?? new List<Event>();

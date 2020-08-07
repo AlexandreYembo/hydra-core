@@ -6,6 +6,12 @@ namespace Hydra.Core.Messages
     public abstract class Message
     {
         public string MessageType { get; protected set; }
+
+
+        /// <summary>
+        /// All command triggered has reference with Aggregation root
+        /// </summary>
+        /// <value></value>
         public Guid AggregateId { get; protected set; }
 
         protected Message()
