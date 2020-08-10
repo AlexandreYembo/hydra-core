@@ -1,6 +1,8 @@
 using System;
 using System.Threading.Tasks;
+using Hydra.Core.Data.EventSourcing;
 using Hydra.Core.Messages;
+using Hydra.Core.Messages.CommonMessages.DomainEvents;
 using Hydra.Core.Messages.CommonMessages.Notifications;
 using MediatR;
 
@@ -12,10 +14,12 @@ namespace Hydra.Core.Communication.Mediator
     public class MediatorHandler : IMediatorHandler
     {
         private readonly IMediator _mediator;
+        private readonly IEventSourcingRepository _eventSourcingRepository;
 
-        public MediatorHandler(IMediator mediator)
+        public MediatorHandler(IMediator mediator, IEventSourcingRepository eventSourcingRepository)
         {
             _mediator = mediator;
+            _eventSourcingRepository = eventSourcingRepository;
         }
 
 
@@ -28,7 +32,20 @@ namespace Hydra.Core.Communication.Mediator
         public async Task PublishEvent<T>(T tEvent) where T : Event
         {
             await _mediator.Publish(tEvent);
+
+            await _eventSourcingRepository.SaveEvent(tEvent);
         }
+
+        /// <summary>
+        /// Will publish an event
+        /// </summary>
+        /// <param name="tEvent"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public async Task PublishDomainEvent<T>(T tEvent) where T : DomainEvent
+        {
+            await _mediator.Publish(tEvent);
+        } 
 
         public async Task PublishNotification<T>(T notification) where T : DomainNotification
         {
