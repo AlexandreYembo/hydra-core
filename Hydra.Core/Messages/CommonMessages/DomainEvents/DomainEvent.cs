@@ -11,7 +11,7 @@ namespace Hydra.Core.Messages.CommonMessages.DomainEvents
     {
         public DateTime Timestamp { get; private set; }
 
-        public DomainEvent(Guid aggregateId)
+        protected DomainEvent(Guid aggregateId)
         {
             AggregateId = aggregateId;
             Timestamp = DateTime.Now;
