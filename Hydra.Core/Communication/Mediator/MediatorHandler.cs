@@ -32,7 +32,6 @@ namespace Hydra.Core.Communication.Mediator
         public async Task PublishEvent<T>(T tEvent) where T : Event
         {
             await _mediator.Publish(tEvent);
-
             await _eventSourcingRepository.SaveEvent(tEvent);
         }
 
