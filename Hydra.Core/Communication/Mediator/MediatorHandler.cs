@@ -5,6 +5,7 @@ using Hydra.Core.Messages;
 using Hydra.Core.Messages.CommonMessages.DomainEvents;
 using Hydra.Core.Messages.CommonMessages.Notifications;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 
 namespace Hydra.Core.Communication.Mediator
 {
@@ -15,8 +16,10 @@ namespace Hydra.Core.Communication.Mediator
     {
         private readonly IMediator _mediator;
         private readonly IEventSourcingRepository _eventSourcingRepository;
+        private readonly IConfiguration _configuration;
 
-        public MediatorHandler(IMediator mediator, IEventSourcingRepository eventSourcingRepository)
+
+        public MediatorHandler(IMediator mediator, IEventSourcingRepository eventSourcingRepository, IConfiguration configuration)
         {
             _mediator = mediator;
             _eventSourcingRepository = eventSourcingRepository;
@@ -32,7 +35,11 @@ namespace Hydra.Core.Communication.Mediator
         public async Task PublishEvent<T>(T tEvent) where T : Event
         {
             await _mediator.Publish(tEvent);
-            await _eventSourcingRepository.SaveEvent(tEvent);
+
+            var eventSourcingEnabled = Boolean.Parse(_configuration.GetSection("EnableEventSourcing").Value);
+            
+            if(eventSourcingEnabled)
+                await _eventSourcingRepository.SaveEvent(tEvent);
         }
 
         /// <summary>
