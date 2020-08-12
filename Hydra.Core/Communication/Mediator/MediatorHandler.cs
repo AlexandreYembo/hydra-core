@@ -23,6 +23,7 @@ namespace Hydra.Core.Communication.Mediator
         {
             _mediator = mediator;
             _eventSourcingRepository = eventSourcingRepository;
+            _configuration = configuration;
         }
 
 
