@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
@@ -22,5 +23,7 @@ namespace Hydra.Core.Messages.CommonMessages.Notifications
         }
 
         public virtual List<DomainNotification> GetNotifications() => _notifications;
+
+        public virtual bool HasNotification() => _notifications.Any();
     }
 }
