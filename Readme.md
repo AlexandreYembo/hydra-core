@@ -16,5 +16,5 @@ If there is a submodule created, but you want to get the latest version of the l
 
 #### Registering DomainNotification
 ```c# 
-    services.AddScoped<INotificationHandler<DomainNotification>, Domain NotificationHandler>();
+    services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 ```
