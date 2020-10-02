@@ -18,3 +18,18 @@ If there is a submodule created, but you want to get the latest version of the l
 ```c# 
     services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 ```
+
+# Hydra WebApi Core
+This project contains configuration for WebAapi
+
+#### Adding to Startup.cs
+
+Adding as Service Collection
+```c#
+ services.AddJwtConfiguration(Configuration);
+```
+
+Using in the Application Builder
+```c#
+ app.UseAuthConfiguration();
+```
