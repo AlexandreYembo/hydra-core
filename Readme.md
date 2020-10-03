@@ -33,3 +33,13 @@ Using in the Application Builder
 ```c#
  app.UseAuthConfiguration();
 ```
+
+### Using Claims Authorize
+This attribute is used to allow the user to have few permission, based on claim type and value. To implement you need to use it on the controller method:
+
+Example:
+```c#
+[ClaimsAuthorize("Catalog", "Read")]
+[HttpGet()]
+```
+This also needs to be inserted on the table: ```AspNetUserClaims``` where you validate the user are defined on this table.
