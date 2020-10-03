@@ -1,4 +1,5 @@
 using System.Text;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -9,7 +10,7 @@ namespace Hydra.WebAPI.Core.Identity
 {
     public static class AuthConfig
     {
-        public static void AddJwtConfiguration(this IServiceCollection services, IConfiguration configuration)
+        public static AuthenticationBuilder AddJwtConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -17,7 +18,7 @@ namespace Hydra.WebAPI.Core.Identity
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 
-            services.AddAuthentication(x =>{
+            return services.AddAuthentication(x =>{
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x =>{
