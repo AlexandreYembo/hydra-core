@@ -39,6 +39,7 @@ This attribute is used to allow the user to have few permission, based on claim 
 
 Example:
 ```c#
-[ClaimsAuthorize("Catalog", "Read"]
+[ClaimsAuthorize("Catalog", "Read")]
+[HttpGet()]
 ```
 This also needs to be inserted on the table: ```AspNetUserClaims``` where you validate the user are defined on this table.
