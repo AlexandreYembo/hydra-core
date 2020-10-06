@@ -51,4 +51,12 @@ This class overrides the SendAsyc method of HttpClient. You can pass the token t
 ```c#
     services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
 ```
-Where uses ```AddTransient``` because it is working on the scope of the request.
+Where use ```AddTransient``` because it is working on the scope of the request.
+
+Also you need to register the HttpMessageHandler to the HttpClient.
+
+Example
+```c#
+    services.AddHttpClient<ICatalogService, CatalogService>()
+            .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>();
+```
