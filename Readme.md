@@ -58,5 +58,5 @@ Also you need to register the HttpMessageHandler to the HttpClient.
 Example
 ```c#
     services.AddHttpClient<ICatalogService, CatalogService>()
-            .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>();
+            .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>(); // It will use this delegating Handler to manipulate the request when you use the httpclient
 ```
