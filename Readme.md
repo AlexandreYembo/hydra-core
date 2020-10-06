@@ -61,3 +61,5 @@ Example
             .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>(); 
     // It will use this delegating Handler to manipulate the request when you use the httpclient
 ```
+
+All requests coming from a service registred by using ```AddHttpClient``` will be intercepted by the Delegating Handle once you register as ```AddHttpMessageHandler```
