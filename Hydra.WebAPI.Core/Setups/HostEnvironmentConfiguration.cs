@@ -11,14 +11,14 @@ namespace Hydra.WebAPI.Core.Setups
         /// </summary>
         /// <param name="configuration"></param>
         /// <param name="hostEnvironment"></param>
-        public static void AddHostEnvironment(this IConfiguration configuration, IHostEnvironment hostEnvironment)
+        public static IConfigurationRoot AddHostEnvironment(IHostEnvironment hostEnvironment)
         {
             var builder = new ConfigurationBuilder()
                                .SetBasePath(hostEnvironment.ContentRootPath)
                                .AddJsonFile("appsettings.json", true, true)
                                .AddJsonFile($"appsettings.{hostEnvironment.EnvironmentName}.json", true, true)
                                .AddEnvironmentVariables();
-            configuration = builder.Build();
+            return builder.Build();
         }
     }
 }
