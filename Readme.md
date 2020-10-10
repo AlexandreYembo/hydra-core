@@ -26,13 +26,21 @@ This project contains configuration for WebAapi
 
 Adding as Service Collection
 ```c#
- services.AddJwtConfiguration(Configuration);
+services.AddJwtConfiguration(Configuration);
 ```
 
 Using in the Application Builder
 ```c#
- app.UseAuthConfiguration();
+app.UseAuthConfiguration();
 ```
+
+##### Setup the Host Environment
+
+On the constructor of your Startup file you have to add this line:
+```c#
+Configuration.AddHostEnvironment(hostEnvironment);
+```
+
 
 ### Using Claims Authorize
 This attribute is used to allow the user to have few permission, based on claim type and value. To implement you need to use it on the controller method:
@@ -49,7 +57,7 @@ This class overrides the SendAsyc method of HttpClient. You can pass the token t
 
 #### Register on Dependency Injection
 ```c#
-    services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
+services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
 ```
 Where use ```AddTransient``` because it is working on the scope of the request.
 
@@ -57,16 +65,9 @@ Also you need to register the HttpMessageHandler to the HttpClient.
 
 Example
 ```c#
-    services.AddHttpClient<ICatalogService, CatalogService>()
-            .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>(); 
-    // It will use this delegating Handler to manipulate the request when you use the httpclient
+services.AddHttpClient<ICatalogService, CatalogService>()
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>(); 
+// It will use this delegating Handler to manipulate the request when you use the httpclient
 ```
 
 All requests coming from a service registred by using ```AddHttpClient``` will be intercepted by the Delegating Handler once you register as ```AddHttpMessageHandler```
-
-#### Setup the Host Environment
-
-On the constructor of your Startup file you have to add this line:
-```c#
-Configuration.AddHostEnvironment(hostEnvironment);
-```
