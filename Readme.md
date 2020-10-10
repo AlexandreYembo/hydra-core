@@ -63,3 +63,10 @@ Example
 ```
 
 All requests coming from a service registred by using ```AddHttpClient``` will be intercepted by the Delegating Handler once you register as ```AddHttpMessageHandler```
+
+###### Set the Host Environment
+
+On the constructor of your Startup file you have to add this line:
+```c#
+Configuration.AddHostEnvironment(hostEnvironment);
+```
