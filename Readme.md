@@ -16,7 +16,7 @@ If there is a submodule created, but you want to get the latest version of the l
 
 #### Registering DomainNotification
 ```c# 
-    services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
+services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 ```
 
 # Hydra WebApi Core
