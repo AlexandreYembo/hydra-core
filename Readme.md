@@ -43,3 +43,23 @@ Example:
 [HttpGet()]
 ```
 This also needs to be inserted on the table: ```AspNetUserClaims``` where you validate the user are defined on this table.
+
+### Using HttpClientAuthorizationDelegatingHandler
+This class overrides the SendAsyc method of HttpClient. You can pass the token through the Header, by intercepting the request.
+
+###### Register on Dependency Injection
+```c#
+    services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
+```
+Where use ```AddTransient``` because it is working on the scope of the request.
+
+Also you need to register the HttpMessageHandler to the HttpClient.
+
+Example
+```c#
+    services.AddHttpClient<ICatalogService, CatalogService>()
+            .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>(); 
+    // It will use this delegating Handler to manipulate the request when you use the httpclient
+```
+
+All requests coming from a service registred by using ```AddHttpClient``` will be intercepted by the Delegating Handler once you register as ```AddHttpMessageHandler```
