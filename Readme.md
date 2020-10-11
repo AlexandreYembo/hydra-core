@@ -38,7 +38,7 @@ app.UseAuthConfiguration();
 
 On the constructor of your Startup file you have to add this line:
 ```c#
-Configuration.AddHostEnvironment(hostEnvironment);
+Configuration = HostEnvironmentConfiguration.AddHostEnvironment(hostEnvironment);
 ```
 
 
