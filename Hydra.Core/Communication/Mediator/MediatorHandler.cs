@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using FluentValidation.Results;
-using Hydra.Core.Data.EventSourcing;
 using Hydra.Core.Messages;
 using Hydra.Core.Messages.CommonMessages.DomainEvents;
 using Hydra.Core.Messages.CommonMessages.Notifications;
@@ -16,14 +15,12 @@ namespace Hydra.Core.Communication.Mediator
     public class MediatorHandler : IMediatorHandler
     {
         private readonly IMediator _mediator;
-        private readonly IEventSourcingRepository _eventSourcingRepository;
         private readonly IConfiguration _configuration;
 
 
-        public MediatorHandler(IMediator mediator, IEventSourcingRepository eventSourcingRepository, IConfiguration configuration)
+        public MediatorHandler(IMediator mediator, IConfiguration configuration)
         {
             _mediator = mediator;
-            _eventSourcingRepository = eventSourcingRepository;
             _configuration = configuration;
         }
 
@@ -37,11 +34,6 @@ namespace Hydra.Core.Communication.Mediator
         public async Task PublishEvent<T>(T tEvent) where T : Event
         {
             await _mediator.Publish(tEvent);
-
-            var eventSourcingEnabled = Boolean.Parse(_configuration.GetSection("EnableEventSourcing").Value);
-            
-            if(eventSourcingEnabled)
-                await _eventSourcingRepository.SaveEvent(tEvent);
         }
 
         /// <summary>
