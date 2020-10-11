@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using FluentValidation.Results;
 using Hydra.Core.Data.EventSourcing;
 using Hydra.Core.Messages;
 using Hydra.Core.Messages.CommonMessages.DomainEvents;
@@ -59,7 +60,7 @@ namespace Hydra.Core.Communication.Mediator
             await _mediator.Publish(notification);
         }
 
-        public async Task<bool> SendCommand<T>(T command) where T : Command
+        public async Task<ValidationResult> SendCommand<T>(T command) where T : Command
         {
             return await _mediator.Send(command);
         }
