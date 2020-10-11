@@ -24,7 +24,7 @@ namespace Hydra.Core.Messages
         /// <returns></returns>
         protected async Task<ValidationResult> Save(IUnitOfWork uow)
         {
-            if(await uow.Commit()) AddError("Error to save the customer");
+            if(!await uow.Commit()) AddError("Error to persist the data");
 
             return ValidationResult;
         }
