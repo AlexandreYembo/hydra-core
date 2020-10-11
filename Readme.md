@@ -12,9 +12,15 @@ In the bounded context folder you are working on, if there is no submodule defin
 If there is a submodule created, but you want to get the latest version of the library you can run:
 ```git submodule update --remote```
 
-#### Configuring Dependency injection in your application.
 
-#### Registering DomainNotification
+#### Registering DomainNotification Mediator
+In the startup file, before call the method to register the depedency injection, you may register the MediatR.
+
+```c#
+services.AddMediatR(typeof(Startup));
+```
+
+##### Configuring Dependency injection in your application.
 ```c# 
 services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 ```
