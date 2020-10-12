@@ -5,7 +5,7 @@ namespace Hydra.Core.MessageBus
 {
     public static class DepedencyInjectionExtensions
     {
-        public static void ddMessageBus(this IServiceCollection services, string connection)
+        public static void AddMessageBus(this IServiceCollection services, string connection)
         {
             if(string.IsNullOrEmpty(connection)) throw new ArgumentNullException();
 
