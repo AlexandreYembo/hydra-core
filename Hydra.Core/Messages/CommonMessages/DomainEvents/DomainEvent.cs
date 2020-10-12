@@ -7,7 +7,7 @@ namespace Hydra.Core.Messages.CommonMessages.DomainEvents
     /// <summary>
     /// Super class of Domain Event
     /// </summary>
-    public class DomainEvent : Message, INotification
+    public abstract class DomainEvent : Message, INotification
     {
         public DateTime Timestamp { get; private set; }
 

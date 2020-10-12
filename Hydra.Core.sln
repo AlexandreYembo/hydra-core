@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core", "Hydra.Core\Hy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.WebAPI.Core", "Hydra.WebAPI.Core\Hydra.WebAPI.Core.csproj", "{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Integration", "Hydra.Core.Integration\Hydra.Core.Integration.csproj", "{9801C37B-7DF7-487F-84ED-67BB019F7E01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}.Release|x64.Build.0 = Release|Any CPU
 		{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}.Release|x86.ActiveCfg = Release|Any CPU
 		{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}.Release|x86.Build.0 = Release|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Debug|x64.Build.0 = Debug|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Debug|x86.Build.0 = Debug|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Release|x64.ActiveCfg = Release|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Release|x64.Build.0 = Release|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Release|x86.ActiveCfg = Release|Any CPU
+		{9801C37B-7DF7-487F-84ED-67BB019F7E01}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
