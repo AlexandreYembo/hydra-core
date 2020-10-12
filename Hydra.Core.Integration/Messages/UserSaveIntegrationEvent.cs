@@ -5,9 +5,9 @@ namespace Hydra.Core.Integration.Messages
     /// <summary>
     /// Class used to comunicate across multiple apis via integration and Queue
     /// </summary>
-    public class RegisteredUserIntegrationEvent : IntegrationEvent
+    public class UserSaveIntegrationEvent : IntegrationEvent
     {
-        public RegisteredUserIntegrationEvent(Guid id, string name, string email, string identityNumber)
+        public UserSaveIntegrationEvent(Guid id, string name, string email, string identityNumber)
         {
             Id = id;
             Name = name;
