@@ -77,3 +77,12 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 ```
 
 All requests coming from a service registred by using ```AddHttpClient``` will be intercepted by the Delegating Handler once you register as ```AddHttpMessageHandler```
+
+# Hydra Core MessageBus
+This project is used to implement message Bus, by using EasynetQ library and RabbitMQ implementation.
+
+#### Register on Dependency Injection
+```c#
+services.AddMessageBus("<your rabbitMQ connection>");
+```
+
