@@ -83,6 +83,6 @@ This project is used to implement message Bus, by using EasynetQ library and Rab
 
 #### Register on Dependency Injection
 ```c#
-services.AddMessageBus("<your rabbitMQ connection>");
+services.AddMessageBus(configuration.GetMessageQueueConnection("MessageBus"));
 ```
 
