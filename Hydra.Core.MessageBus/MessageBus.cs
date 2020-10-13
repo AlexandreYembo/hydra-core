@@ -10,8 +10,9 @@ namespace Hydra.Core.MessageBus
     public class MessageBus : IMessageBus
     {
         private IBus _bus;
-
         private readonly string _connectionString;
+
+        private IAdvancedBus _advancedBus;
 
         public MessageBus(string connectionString)
         {
@@ -20,6 +21,8 @@ namespace Hydra.Core.MessageBus
         }
 
         public bool IsConnected => _bus?.IsConnected ?? false;
+
+        public IAdvancedBus AdvancedBus => _bus?.Advanced;
 
         public void Publish<T>(T message) where T : IntegrationEvent
         {
@@ -86,7 +89,25 @@ namespace Hydra.Core.MessageBus
                                 .WaitAndRetry(3, retryAttempt =>
                                     TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
             
-            policy.Execute(() => { _bus = RabbitHutch.CreateBus(_connectionString); });
+            policy.Execute(() => { 
+                _bus = RabbitHutch.CreateBus(_connectionString); 
+                _advancedBus = _bus.Advanced;
+                _advancedBus.Disconnected += OnDisconnect; //Event is called when try for 3 times and afterwars throw an exception that will call the OnDisconnect Method
+                });
+        }
+
+        /// <summary>
+        /// When the application disconnect, for example in case the RabbitMQ is not available, the application needs to recicle the subscription
+        /// By trying to ping the RabbitMQ server till it becomes available again.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="e"></param>
+        private void OnDisconnect(object obj, EventArgs e){
+            var policy = Policy.Handle<EasyNetQException>() //EasyNetQ exception
+                                .Or<BrokerUnreachableException>() //RabbitMQ Exception
+                                .RetryForever();
+            
+            policy.Execute(TryConnect);
         }
 
         public void Dispose()

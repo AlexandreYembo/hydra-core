@@ -1,11 +1,16 @@
 using System;
 using System.Threading.Tasks;
+using EasyNetQ;
 using Hydra.Core.Integration.Messages;
 
 namespace Hydra.Core.MessageBus
 {
     public interface IMessageBus : IDisposable
     {
+        IAdvancedBus AdvancedBus {get;}
+        
+        bool IsConnected { get; }
+
          void Publish<T>(T message) where T : IntegrationEvent;
 
          Task PublishAsync<T>(T message) where T : IntegrationEvent;
@@ -29,7 +34,5 @@ namespace Hydra.Core.MessageBus
         IDisposable RespondAsync<TRequest, TResponse>(Func<TRequest, Task<TResponse>> respond)
             where TRequest: IntegrationEvent
             where TResponse: ResponseMessage;
-
-        bool IsConnected { get; }
     }
 }
