@@ -12,7 +12,7 @@ namespace Hydra.WebAPI.Core.Identity
     public class CustomAuthorization
     {
         public static bool UserClaimsValid(HttpContext context, string claimName, string claimValue) =>
-            context.User.Identity.IsAuthenticated && context.User.Claims.Any(c => c.Type == claimName && c.Value.Contains(claimName));
+            context.User.Identity.IsAuthenticated && context.User.Claims.Any(c => c.Type == claimName && c.Value.Contains(claimValue));
     }
 
     public class ClaimsAuthorizeAttribute : TypeFilterAttribute
