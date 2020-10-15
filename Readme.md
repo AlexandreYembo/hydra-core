@@ -47,6 +47,20 @@ On the constructor of your Startup file you have to add this line:
 Configuration = HostEnvironmentConfiguration.AddHostEnvironment(hostEnvironment);
 ```
 
+##### Setup Swagger to the API
+
+On this sector you can simply pass through the configuration few informations from your API:
+
+Example:
+```c#
+services.AddSwaggerConfiguration(new SwaggerConfig{Title = "Hydra Customer API", 
+                        Description = "This API can be used as part of an ecommerce or any other type of enterprise application", 
+                        Version = "v1"});
+```
+and also you have to use the configuration:
+```c#
+app.UseSwaggerConfiguration(new SwaggerConfig{Version = "v1"});
+```
 
 ### Using Claims Authorize
 This attribute is used to allow the user to have few permission, based on claim type and value. To implement you need to use it on the controller method:
