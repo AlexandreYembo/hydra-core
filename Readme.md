@@ -75,7 +75,7 @@ This also needs to be inserted on the table: ```AspNetUserClaims``` where you va
 ### Using HttpClientAuthorizationDelegatingHandler
 This class overrides the SendAsyc method of HttpClient. You can pass the token through the Header, by intercepting the request.
 
-#### Register on Dependency Injection
+#### Register Http Client on Dependency Injection
 ```c#
 services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
 ```
@@ -89,8 +89,25 @@ services.AddHttpClient<ICatalogService, CatalogService>()
         .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>(); 
 // It will use this delegating Handler to manipulate the request when you use the httpclient
 ```
-
 All requests coming from a service registred by using ```AddHttpClient``` will be intercepted by the Delegating Handler once you register as ```AddHttpMessageHandler```
+
+Also you can add Certificate configuration if you are gonna have a comunication beetween apis.
+```c#
+services.AddHttpClient<ICatalogService, CatalogService>()
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+        .AllowSelfSignedCertificate(); -> this will self assign the certificate to prevent SSL certificate error
+```
+In addition on this section you can complete this configuration adding policy of retry and circuit breaker.
+
+This is the complete configuration:
+```c#
+ services.AddHttpClient<ICatalogService, CatalogService>()
+         .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+         .AllowSelfSignedCertificate()
+         .AddPolicyHandler(PollyExtensions.WaitAndRetry())
+         .AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+```
+
 
 # Hydra Core MessageBus
 This project is used to implement message Bus, by using EasynetQ library and RabbitMQ implementation.
