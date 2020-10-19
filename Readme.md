@@ -75,7 +75,7 @@ This also needs to be inserted on the table: ```AspNetUserClaims``` where you va
 ### Using HttpClientAuthorizationDelegatingHandler
 This class overrides the SendAsyc method of HttpClient. You can pass the token through the Header, by intercepting the request.
 
-#### Register Http Client on Dependency Injection
+#### Registering Http Client on Dependency Injection
 ```c#
 services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
 ```
@@ -112,7 +112,7 @@ This is the complete configuration:
 # Hydra Core MessageBus
 This project is used to implement message Bus, by using EasynetQ library and RabbitMQ implementation.
 
-#### Register on Dependency Injection
+#### Registering on Dependency Injection
 ```c#
 services.AddMessageBus(configuration.GetMessageQueueConnection("MessageBus"));
 ```
