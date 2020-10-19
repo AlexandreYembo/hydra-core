@@ -24,3 +24,28 @@ services.AddMediatR(typeof(Startup));
 ```c# 
 services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 ```
+### How to use specification patttern
+This project contains a folder called Specification, that is a easy way to implement the specification pattern. To use it you only need to create a class that implements the abstract class ```Specification<T>```.
+
+Example of the usage: Class for validation, for each item you will need to create a new specification.
+```c#
+ public class VoucherActiveSpecification : Specification<Voucher>
+{
+        public override Expression<Func<Voucher, bool>> ToExpression() => voucher => voucher.Active == true;
+}
+```
+
+and then in you can use in your class:
+```c#
+  var spec = new VoucherActiveSpecification();
+  return spec.IsSatisfiedBy(this);
+```
+
+#### Composing the Specification:
+You can create a composite of Specification by following this example:
+```c#
+ var spec = new VoucherActiveSpecification()
+                            .And(new VoucherDataSpecification())
+                            .And(new VoucherQuantitySpecification());
+return spec.IsSatisfiedBy(this);                      
+```
