@@ -95,7 +95,7 @@ Also you can add Certificate configuration if you are gonna have a comunication 
 ```c#
 services.AddHttpClient<ICatalogService, CatalogService>()
         .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
-        .AllowSelfSignedCertificate(); -> this will self assign the certificate to prevent SSL certificate error
+        .AllowSelfSignedCertificate(); //-> this will self assign the certificate to prevent SSL certificate error
 ```
 In addition on this section you can complete this configuration adding policy of retry and circuit breaker.
 
