@@ -42,7 +42,7 @@ and then in you can use in your class:
 ```
 
 #### Composing the Specification:
-You can create a composite of Specification by following this example:
+You can create a compose a Specification by following this example:
 ```c#
  var spec = new VoucherActiveSpecification()
                             .And(new VoucherDataSpecification())
