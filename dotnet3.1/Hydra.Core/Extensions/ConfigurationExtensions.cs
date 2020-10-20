@@ -6,5 +6,8 @@ namespace Hydra.Core.Extensions
     {
         public static string GetMessageQueueConnection(this IConfiguration configuration, string name) => 
             configuration?.GetSection("MessageQueueConnection")?[name];
+        
+         public static string GetRedisConnection(this IConfiguration configuration, string name) => 
+            configuration?.GetSection("RedisCache")?[name];
     }
 }
