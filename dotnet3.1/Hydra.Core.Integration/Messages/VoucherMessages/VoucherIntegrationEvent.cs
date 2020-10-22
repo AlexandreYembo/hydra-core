@@ -1,6 +1,6 @@
 using System;
 
-namespace Hydra.Core.Integration.Messages
+namespace Hydra.Core.Integration.Messages.VoucherMessages
 {
     public class VoucherIntegrationEvent: IntegrationEvent
     {
