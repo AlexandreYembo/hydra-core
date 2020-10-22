@@ -1,11 +1,13 @@
 using System;
+using FluentValidation.Results;
 
 namespace Hydra.Core.Integration.Messages.VoucherMessages
 {
-    public class VoucherResponseMessage
+    public class VoucherResponseMessage : ResponseMessage
     {
         public VoucherResponseMessage(string code, decimal? discount,
-            VoucherType voucherType,  DateTime expirationDate, bool active, bool isUsed)
+            VoucherType voucherType,  DateTime expirationDate, bool active, bool isUsed, ValidationResult validationResult) 
+        : base(validationResult)
         {
             Code = code;
             Discount = discount;
