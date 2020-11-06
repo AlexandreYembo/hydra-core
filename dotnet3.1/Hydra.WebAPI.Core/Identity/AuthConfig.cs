@@ -26,11 +26,11 @@ namespace Hydra.WebAPI.Core.Identity
                 x.SaveToken = true;
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuerSigningKey = true,    //validate the signature, not accept the token with any signature
+                    IssuerSigningKey = new SymmetricSecurityKey(key), //criptography key
                     ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidAudience = appSettings.ValidAudience,
+                    ValidateAudience = true, //which domain is valid
+                    ValidAudience = appSettings.ValidAudience, //which domain is valid
                     ValidIssuer = appSettings.ValidIssuer
                 };
             });
