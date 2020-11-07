@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using NetDevPack.Security.JwtExtensions;
 
 namespace Hydra.WebAPI.Core.Identity
 {
@@ -16,23 +17,14 @@ namespace Hydra.WebAPI.Core.Identity
             services.Configure<AppSettings>(appSettingsSection);
             
             var appSettings = appSettingsSection.Get<AppSettings>();
-            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-
+          
             return services.AddAuthentication(x =>{
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x =>{
                 x.RequireHttpsMetadata = true;
                 x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,    //validate the signature, not accept the token with any signature
-                    IssuerSigningKey = new SymmetricSecurityKey(key), //criptography key
-                    ValidateIssuer = true,
-                    ValidateAudience = true, //which domain is valid
-                    ValidAudience = appSettings.ValidAudience, //which domain is valid
-                    ValidIssuer = appSettings.ValidIssuer
-                };
+                x.SetJwksOptions(new JwkOptions(appSettings.AuthenticationJwksUrl)); // it will undestand the JWT based on the value that will return from the public endpoint
             });
         }
 

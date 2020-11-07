@@ -3,9 +3,11 @@ namespace Hydra.WebAPI.Core.Identity
     public class AppSettings
     {
         
-        public string Secret { get; set; }
-        public double ExpirationTime { get; set; }
-        public string ValidAudience { get; set; }
-        public string ValidIssuer { get; set; }
+        /// <summary>
+        /// it will read the public key from the endpoint
+        /// example: localhost/jwks
+        /// </summary>
+        /// <value></value>
+        public string AuthenticationJwksUrl { get; set; }
     }
 }
