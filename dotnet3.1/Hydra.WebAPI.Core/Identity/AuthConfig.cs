@@ -1,3 +1,4 @@
+using System.Net.Http;
 using System.Text;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -22,7 +23,8 @@ namespace Hydra.WebAPI.Core.Identity
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x =>{
-                x.RequireHttpsMetadata = true;
+                x.RequireHttpsMetadata = false;
+                x.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; }};
                 x.SaveToken = true;
                 x.SetJwksOptions(new JwkOptions(appSettings.AuthenticationJwksUrl)); // it will undestand the JWT based on the value that will return from the public endpoint
             });
