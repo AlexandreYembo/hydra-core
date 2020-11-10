@@ -18,5 +18,6 @@ To add the interceptor ```AddgGRPCInterceptor``` after declaring the client fact
    services.AddGrpcClient<BasketGrpc.BasketClient>(options => 
             {
                 options.Address = new Uri(configuration["BasketUrl"]);
-   }).AddgGRPCInterceptor();
+   }).AddgGRPCInterceptor()
+   .AllowSelfSignedCertificate();
 ```
