@@ -24,7 +24,7 @@ namespace Hydra.WebAPI.Core.Identity
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x =>{
                 x.RequireHttpsMetadata = false;
-                // x.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; }}; //force to return always true
+                x.BackchannelHttpHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = delegate { return true; }}; //force to return always true
                 x.SaveToken = true;
                 x.SetJwksOptions(new JwkOptions(appSettings.AuthenticationJwksUrl)); // it will undestand the JWT based on the value that will return from the public endpoint
             });
