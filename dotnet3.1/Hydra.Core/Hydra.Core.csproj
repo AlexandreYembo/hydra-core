@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>HydraCore</PackageId>
+    <PackageId>Hydra.Core</PackageId>
     <Version>1.0.0</Version>
     <Authors>Alexandre Yembo</Authors>
     <Company>Hydra</Company>

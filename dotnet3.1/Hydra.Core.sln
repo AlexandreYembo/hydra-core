@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core", "Hydra.Core\Hydra.Core.csproj", "{F9A56C03-BD82-4926-9E66-A9BE1639DC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.WebAPI.Core", "Hydra.WebAPI.Core\Hydra.WebAPI.Core.csproj", "{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.API", "Hydra.Core.API\Hydra.Core.API.csproj", "{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Integration", "Hydra.Core.Integration\Hydra.Core.Integration.csproj", "{9801C37B-7DF7-487F-84ED-67BB019F7E01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.MessageBus", "Hydra.Core.MessageBus\Hydra.Core.MessageBus.csproj", "{A2E90752-3223-4BBC-B945-50D841B09C9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.gRPC.Core", "Hydra.gRPC.Core\Hydra.gRPC.Core.csproj", "{C6713124-E1B7-40E5-9570-5C5EFF89DDAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.gRPC", "Hydra.Core.gRPC\Hydra.Core.gRPC.csproj", "{C6713124-E1B7-40E5-9570-5C5EFF89DDAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
