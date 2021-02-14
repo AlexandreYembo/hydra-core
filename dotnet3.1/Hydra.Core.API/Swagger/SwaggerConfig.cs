@@ -1,4 +1,4 @@
-namespace Hydra.WebAPI.Core.Swagger
+namespace Hydra.Core.API.Swagger
 {
     public class SwaggerConfig
     {

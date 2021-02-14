@@ -1,7 +1,7 @@
-using Hydra.gRPC.Core.Services;
+using Hydra.Core.gRPC.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Hydra.gRPC.Core.Config
+namespace Hydra.Core.gRPC.Config
 {
     public static class GrpcInterceptorConfig
     {

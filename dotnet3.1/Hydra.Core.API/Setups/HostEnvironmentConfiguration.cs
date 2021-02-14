@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-namespace Hydra.WebAPI.Core.Setups
+namespace Hydra.Core.API.Setups
 {
     public static class HostEnvironmentConfiguration
     {

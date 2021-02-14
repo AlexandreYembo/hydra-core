@@ -5,7 +5,7 @@ using Hydra.Core.Communication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Hydra.WebAPI.Core.Controllers
+namespace Hydra.Core.API.Controllers
 {
     [ApiController]
     public abstract class MainController : Controller

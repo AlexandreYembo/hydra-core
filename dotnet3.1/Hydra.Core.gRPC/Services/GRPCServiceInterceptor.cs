@@ -3,7 +3,7 @@ using Grpc.Core.Interceptors;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 
-namespace Hydra.gRPC.Core.Services
+namespace Hydra.Core.gRPC.Services
 {
     /// <summary>
     /// Will work on the scope of singleton

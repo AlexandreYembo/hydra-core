@@ -2,7 +2,7 @@ using System;
 using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Hydra.WebAPI.Core.Extensions
+namespace Hydra.Core.API.Extensions
 {
     /// <summary>
     /// Class used to validate the SSL Certificate

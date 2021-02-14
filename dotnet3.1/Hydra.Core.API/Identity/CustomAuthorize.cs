@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Hydra.WebAPI.Core.Identity
+namespace Hydra.Core.API.Identity
 {
     /// <summary>
     /// Valid claims

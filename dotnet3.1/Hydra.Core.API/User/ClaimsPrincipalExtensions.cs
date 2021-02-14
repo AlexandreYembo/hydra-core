@@ -1,7 +1,7 @@
 using System;
 using System.Security.Claims;
 
-namespace Hydra.WebAPI.Core.User
+namespace Hydra.Core.API.User
 {
     public static class ClaimsPrincipalExtensions
     {

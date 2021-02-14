@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 
-namespace Hydra.WebAPI.Core.User
+namespace Hydra.Core.API.User
 {
     public interface IAspNetUser
     {

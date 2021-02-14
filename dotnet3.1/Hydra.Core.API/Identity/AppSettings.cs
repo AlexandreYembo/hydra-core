@@ -1,4 +1,4 @@
-namespace Hydra.WebAPI.Core.Identity
+namespace Hydra.Core.API.Identity
 {
     public class AppSettings
     {

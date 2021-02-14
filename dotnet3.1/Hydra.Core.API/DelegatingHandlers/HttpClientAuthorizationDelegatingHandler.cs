@@ -3,9 +3,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
-using Hydra.WebAPI.Core.User;
+using Hydra.Core.API.User;
 
-namespace Hydra.WebAPI.Core.DelegatingHandlers
+namespace Hydra.Core.API.DelegatingHandlers
 {
     /// <summary>
     /// Override the SendAsync of the HttpClient

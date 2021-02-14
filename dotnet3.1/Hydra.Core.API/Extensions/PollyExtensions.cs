@@ -4,7 +4,7 @@ using Polly;
 using Polly.Extensions.Http;
 using Polly.Retry;
 
-namespace Hydra.WebAPI.Core.Extensions
+namespace Hydra.Core.API.Extensions
 {
     public static class PollyExtensions
     {

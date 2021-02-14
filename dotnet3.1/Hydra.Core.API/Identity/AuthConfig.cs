@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using NetDevPack.Security.JwtExtensions;
 
-namespace Hydra.WebAPI.Core.Identity
+namespace Hydra.Core.API.Identity
 {
     public static class AuthConfig
     {

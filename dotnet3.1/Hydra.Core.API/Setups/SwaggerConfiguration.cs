@@ -1,10 +1,10 @@
 using System;
-using Hydra.WebAPI.Core.Swagger;
+using Hydra.Core.API.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace Hydra.WebAPI.Core.Setups
+namespace Hydra.Core.API.Setups
 {
     public static class SwaggerConfiguration
     {
