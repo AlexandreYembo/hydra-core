@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core", "Framework\Hydra.Core\Hydra.Core.csproj", "{F9A56C03-BD82-4926-9E66-A9BE1639DC96}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.API", "Framework\Hydra.Core.API\Hydra.Core.API.csproj", "{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Integration", "Framework\Hydra.Core.Integration\Hydra.Core.Integration.csproj", "{9801C37B-7DF7-487F-84ED-67BB019F7E01}"
@@ -44,18 +42,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Debug|x64.Build.0 = Debug|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Debug|x86.Build.0 = Debug|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Release|x64.ActiveCfg = Release|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Release|x64.Build.0 = Release|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Release|x86.ActiveCfg = Release|Any CPU
-		{F9A56C03-BD82-4926-9E66-A9BE1639DC96}.Release|x86.Build.0 = Release|Any CPU
 		{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC32FA84-05F5-4B5D-9178-83C4B47E0A04}.Debug|x64.ActiveCfg = Debug|Any CPU

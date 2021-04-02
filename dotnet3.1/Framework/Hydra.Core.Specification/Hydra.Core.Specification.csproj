@@ -8,4 +8,7 @@
     <PackageDescription>This package is a Hydra core Specification library that implements the specification pattern!</PackageDescription>
     <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
   </PropertyGroup>
+   <ItemGroup>
+     <PackageReference Include="fluentvalidation" Version="9.0.1" />
+   </ItemGroup>
 </Project>
