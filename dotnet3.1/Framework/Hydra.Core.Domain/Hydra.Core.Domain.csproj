@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hydra.Core.Abstractions\Hydra.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\Hydra.Core.Mediator\Hydra.Core.Mediator.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>Hydra.Core.DomainObjects</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Alexandre Yembo</Authors>
+    <Company>Hydra</Company>
+    <PackageDescription>This package contains the Domain Object used to implement DDD!</PackageDescription>
+    <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
