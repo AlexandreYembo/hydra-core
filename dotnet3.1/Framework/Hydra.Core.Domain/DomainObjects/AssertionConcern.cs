@@ -1,8 +1,8 @@
 using System.Text.RegularExpressions;
 
-namespace Hydra.Core.DomainObjects
+namespace Hydra.Core.Domain.DomainObjects
 {
-    /// <summary>
+     /// <summary>
     /// From: Vernon - red book 
     /// </summary>
     public class AssertionConcern

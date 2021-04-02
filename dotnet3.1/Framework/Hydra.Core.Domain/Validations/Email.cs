@@ -1,8 +1,9 @@
 using System.Text.RegularExpressions;
+using Hydra.Core.Domain.DomainObjects;
 
-namespace Hydra.Core.DomainObjects
+namespace Hydra.Core.Domain.Validations
 {
-    public class Email
+   public class Email
     {
         public const string MaxLength = "150";
         public string Value { get; private set; }

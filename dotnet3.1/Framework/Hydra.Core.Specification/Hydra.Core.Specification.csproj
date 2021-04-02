@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>Hydra.Core.Specification</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Alexandre Yembo</Authors>
+    <Company>Hydra</Company>
+    <PackageDescription>This package is a Hydra core Specification library that implements the specification pattern!</PackageDescription>
+    <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
+  </PropertyGroup>
+</Project>

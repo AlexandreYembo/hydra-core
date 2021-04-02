@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace Hydra.Core.Extensions
+namespace Hydra.Core.API.Extensions
 {
     public static class ConfigurationExtensions
     {

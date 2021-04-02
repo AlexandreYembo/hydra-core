@@ -1,6 +1,6 @@
 using System;
 
-namespace Hydra.Core.DomainObjects
+namespace Hydra.Core.Domain.DomainObjects
 {
     public class DomainException : Exception
     {
