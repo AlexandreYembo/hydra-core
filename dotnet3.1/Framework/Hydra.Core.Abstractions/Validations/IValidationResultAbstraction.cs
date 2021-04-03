@@ -9,5 +9,6 @@ namespace Hydra.Core.Abstractions.Validations
     {
          void AddError(string message);
          void AddError(string property, string message);
+         bool IsValid { get; }
     }
 }

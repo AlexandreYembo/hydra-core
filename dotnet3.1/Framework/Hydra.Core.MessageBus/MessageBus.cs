@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using EasyNetQ;
-using Hydra.Core.Integration.Messages;
+using Hydra.Core.Mediator.Integration;
 using Polly;
 using RabbitMQ.Client.Exceptions;
 

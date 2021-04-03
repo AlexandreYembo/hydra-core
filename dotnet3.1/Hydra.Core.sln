@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Domain", "Framew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Specification", "Framework\Hydra.Core.Specification\Hydra.Core.Specification.csproj", "{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Validator", "Framework\Hydra.Core.Validator\Hydra.Core.Validator.csproj", "{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -186,6 +188,18 @@ Global
 		{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}.Release|x64.Build.0 = Release|Any CPU
 		{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}.Release|x86.ActiveCfg = Release|Any CPU
 		{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}.Release|x86.Build.0 = Release|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x64.Build.0 = Debug|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x86.Build.0 = Debug|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x64.ActiveCfg = Release|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x64.Build.0 = Release|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B7291C39-585A-4635-805A-937C084AC5D0} = {641BD1E9-F8D6-42F1-A669-36794E9170F1}

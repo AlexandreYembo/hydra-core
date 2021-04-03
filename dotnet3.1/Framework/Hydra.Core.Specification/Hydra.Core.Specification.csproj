@@ -2,7 +2,7 @@
    <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Hydra.Core.Specification</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Alexandre Yembo</Authors>
     <Company>Hydra</Company>
     <PackageDescription>This package is a Hydra core Specification library that implements the specification pattern!</PackageDescription>
