@@ -2,7 +2,7 @@ using System;
 using Hydra.Core.Mediator.Messages;
 using MediatR;
 
-namespace Hydra.Core.Mediator.DomainEvents
+namespace Hydra.Core.Domain.DomainEvents
 {
     /// <summary>
     /// Super class of Domain Event
