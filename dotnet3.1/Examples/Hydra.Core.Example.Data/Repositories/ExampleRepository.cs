@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 using Hydra.Core.Abstractions.Data;
-using Hydra.Core.Domain.Queries;
+using Hydra.Core.Abstractions.Data.Queries;
 using Hydra.Core.Example.Domain.Interfaces;
 using Hydra.Core.Example.Domain.Models;
 using Microsoft.EntityFrameworkCore;
