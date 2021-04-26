@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Hydra.Core.Domain.DomainNotifications;
 using MediatR;
 
 namespace Hydra.Core.Mediator.Notification

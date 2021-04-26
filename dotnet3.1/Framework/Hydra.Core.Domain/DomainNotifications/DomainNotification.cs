@@ -2,7 +2,7 @@ using System;
 using Hydra.Core.Mediator.Messages;
 using MediatR;
 
-namespace Hydra.Core.Mediator.Notification
+namespace Hydra.Core.Domain.DomainNotifications
 {
     //This class is not used for Event root, but it has same inherance of Message and INotification that are present in Event.cs
     public class DomainNotification : Message, INotification

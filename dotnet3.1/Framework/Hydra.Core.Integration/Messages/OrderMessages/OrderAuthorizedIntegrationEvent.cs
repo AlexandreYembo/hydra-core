@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Hydra.Core.Mediator.Integration;
 
 namespace Hydra.Core.Integration.Messages.OrderMessages
 {

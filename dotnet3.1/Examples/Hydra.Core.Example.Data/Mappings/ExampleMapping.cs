@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Hydra.Core.Example.Data.Mappings
 {
-    public class ExampleMapping : IEntityTypeConfiguration<ExampleData>
+    public class ExampleMapping : IEntityTypeConfiguration<ExampleEntity>
     {
-        public void Configure(EntityTypeBuilder<ExampleData> builder)
+        public void Configure(EntityTypeBuilder<ExampleEntity> builder)
         {
            builder.HasKey(c => c.Id);
 
@@ -19,7 +19,7 @@ namespace Hydra.Core.Example.Data.Mappings
                 //         .WithOne(p => p.Category)
                 //         .HasForeignKey(p => p.CategoryId);
 
-            builder.ToTable("ExamplesData");
+            builder.ToTable("ExampleEntity");
         }
     }
 }
