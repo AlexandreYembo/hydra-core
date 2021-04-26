@@ -26,7 +26,7 @@ namespace Hydra.Core.Example.Data.Repositories
             _context?.Dispose();
         }
 
-        public async Task<PagedResult<ExampleData>> GetAll(int pageSize, int pageIndex, string query = null)
+        public async Task<PagedResult<ExampleEntity>> GetAll(int pageSize, int pageIndex, string query = null)
         {
             var sql = @$"SELECT * FROM Products 
                         WHERE (@Name IS NULL OR Name LIKE '%' + @Name + '%')
@@ -38,10 +38,10 @@ namespace Hydra.Core.Example.Data.Repositories
             
             var multi = await _context.Database.GetDbConnection()
                                                .QueryMultipleAsync(sql, new { Name = query});
-            var products = multi.Read<ExampleData>();
+            var products = multi.Read<ExampleEntity>();
             var total = multi.Read<int>().FirstOrDefault();
 
-            return new PagedResult<ExampleData>()
+            return new PagedResult<ExampleEntity>()
             {
                 List = products,
                 TotalResult = total,
@@ -51,19 +51,19 @@ namespace Hydra.Core.Example.Data.Repositories
             };
         }
 
-        public async Task<ExampleData> GetById(Guid id)
+        public async Task<ExampleEntity> GetById(Guid id)
         {
-            return await _context.ExampleData.FindAsync();
+            return await _context.ExampleEntity.FindAsync();
         }
 
-        public void Insert(ExampleData entity)
+        public void Insert(ExampleEntity entity)
         {
-            _context.ExampleData.Add(entity);
+            _context.ExampleEntity.Add(entity);
         }
 
-        public void Update(ExampleData entity)
+        public void Update(ExampleEntity entity)
         {
-            _context.ExampleData.Update(entity);
+            _context.ExampleEntity.Update(entity);
         }
     }
 }

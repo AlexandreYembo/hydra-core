@@ -2,7 +2,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Hydra.Core.Data.Context;
 using Hydra.Core.Domain.DomainObjects;
-using Hydra.Core.Mediator.Communication.Abstractions.Mediator;
+using Hydra.Core.Mediator.Abstractions.Mediator;
 
 namespace Hydra.Core.Data.Extensions
 {

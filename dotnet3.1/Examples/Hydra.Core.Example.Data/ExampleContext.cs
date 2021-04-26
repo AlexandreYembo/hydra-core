@@ -9,7 +9,7 @@ namespace Hydra.Core.Example.Data
         //It is a kind of factory that will be configure the context on Startup.cs
         public ExampleContext(DbContextOptions<ExampleContext> options) : base(options, null){ }
 
-        public DbSet<ExampleData> ExampleData {get; set; }
+        public DbSet<ExampleEntity> ExampleEntity {get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Hydra.Core.Abstractions.Data;
 using Hydra.Core.Data.Extensions;
-using Hydra.Core.Mediator.Communication.Abstractions.Mediator;
+using Hydra.Core.Mediator.Abstractions.Mediator;
 using Hydra.Core.Mediator.Messages;
 using Microsoft.EntityFrameworkCore;
 

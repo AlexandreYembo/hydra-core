@@ -1,4 +1,5 @@
 using System;
+using Hydra.Core.Mediator.Integration;
 
 namespace Hydra.Core.Integration.Messages.VoucherMessages
 {

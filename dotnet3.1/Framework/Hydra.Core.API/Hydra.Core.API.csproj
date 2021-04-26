@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hydra.Core\Hydra.Core.csproj" />
     <ProjectReference Include="..\Hydra.Core.Abstractions\Hydra.Core.Abstractions.csproj" />
     <ProjectReference Include="..\Hydra.Core.Mediator\Hydra.Core.Mediator.csproj" />
   </ItemGroup>
