@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Hydra.Core.Abstractions.Data;
-using Hydra.Core.Domain.Queries;
+using Hydra.Core.Abstractions.Data.Queries;
 using Hydra.Core.Example.Domain.Models;
 
 namespace Hydra.Core.Example.Domain.Interfaces

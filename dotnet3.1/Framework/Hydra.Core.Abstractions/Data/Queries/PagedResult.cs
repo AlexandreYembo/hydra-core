@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Hydra.Core.Domain.Queries
+namespace Hydra.Core.Abstractions.Data.Queries
 {
     /// <summary>
     /// Pagination class
