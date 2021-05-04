@@ -16,7 +16,7 @@ namespace Hydra.Core.Data.Query
             _context = context;
         }
 
-        public async Task<PagedResult<T>> Get<T>(int pageSize, int pageIndex, string sqlQuery, string query = null) where T : class
+        public async Task<PagedResult<T>> GetAsync<T>(int pageSize, int pageIndex, string sqlQuery, string query = null) where T : class
         {
           var multi = await _context.Database.GetDbConnection()
                                              .QueryMultipleAsync(sqlQuery, new { Name = query});

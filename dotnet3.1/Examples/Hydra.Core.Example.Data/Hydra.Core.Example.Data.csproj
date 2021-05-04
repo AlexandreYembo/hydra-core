@@ -5,6 +5,7 @@
     <ProjectReference Include="..\..\Framework\Hydra.Core.Abstractions\Hydra.Core.Abstractions.csproj" />
     <ProjectReference Include="..\Hydra.Core.Example.Domain\Hydra.Core.Example.Domain.csproj" />
     <ProjectReference Include="..\..\Framework\Hydra.Core.Domain\Hydra.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Framework\Hydra.Core.Data.Query\Hydra.Core.Data.Query.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
