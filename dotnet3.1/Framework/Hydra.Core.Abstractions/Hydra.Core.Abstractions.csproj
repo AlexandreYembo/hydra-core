@@ -3,7 +3,6 @@
   <PropertyGroup>
    <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Hydra.Core.Abstractions</PackageId>
-    <Version>1.0.2</Version>
     <Authors>Alexandre Yembo</Authors>
     <Company>Hydra</Company>
     <PackageDescription>This package is an abstraction of the Hydra core library!</PackageDescription>
