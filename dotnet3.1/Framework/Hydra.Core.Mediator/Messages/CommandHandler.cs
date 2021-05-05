@@ -1,20 +1,20 @@
 using System.Threading.Tasks;
+using FluentValidation.Results;
 using Hydra.Core.Abstractions.Data;
-using Hydra.Core.Abstractions.Validations;
 
 namespace Hydra.Core.Mediator.Messages
 {
      public abstract class CommandHandler
     {
-        protected readonly IValidationResultAbstraction _validationResult;
+        protected ValidationResult ValidationResult;
 
-        protected CommandHandler(IValidationResultAbstraction validationResult)
+        protected CommandHandler()
         {
-            _validationResult = validationResult;
+            ValidationResult = new ValidationResult();
         }
 
         protected void AddError(string message) => 
-            _validationResult.AddError(string.Empty, message);
+            ValidationResult.Errors.Add(new ValidationFailure(string.Empty, message));
 
 
         /// <summary>
@@ -22,11 +22,11 @@ namespace Hydra.Core.Mediator.Messages
         /// </summary>
         /// <param name="uow"></param>
         /// <returns></returns>
-        protected async Task<IValidationResultAbstraction> Save(IUnitOfWork uow)
+        protected async Task<ValidationResult> Save(IUnitOfWork uow)
         {
             if(!await uow.Commit()) AddError("Error to persist the data");
 
-            return _validationResult;
+            return ValidationResult;
         }
     }
 }

@@ -1,15 +1,15 @@
-using Hydra.Core.Abstractions.Validations;
+using FluentValidation.Results;
 using Hydra.Core.Mediator.Messages;
 
 namespace Hydra.Core.Integration.Messages
 {
     public class ResponseMessage : Message
     {
-        public ResponseMessage(IValidationResultAbstraction validResult)
+        public ResponseMessage(ValidationResult validResult)
         {
             ValidResult = validResult;
         }
 
-        public IValidationResultAbstraction ValidResult {get; set;}
+        public ValidationResult ValidResult {get; set;}
     }
 }

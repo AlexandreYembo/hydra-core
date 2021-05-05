@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Hydra.Core.gRPC</PackageId>
-    <Version>1.0.1</Version>
     <Authors>Alexandre Yembo</Authors>
     <Company>Hydra</Company>
     <PackageDescription>This package contains helper methods for gRPC implementation </PackageDescription>

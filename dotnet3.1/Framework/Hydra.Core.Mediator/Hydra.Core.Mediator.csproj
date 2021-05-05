@@ -1,13 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\Hydra.Core.Validator\Hydra.Core.Validator.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Hydra.Core.Mediator</PackageId>
-    <Version>1.0.3</Version>
     <Authors>Alexandre Yembo</Authors>
     <Company>Hydra</Company>
     <PackageDescription>This package is library that implements mediator!</PackageDescription>
@@ -17,5 +12,9 @@
    <ItemGroup>
     <PackageReference Include="mediatr" Version="8.1.0" />
   </ItemGroup>
+
+   <ItemGroup>
+     <ProjectReference Include="..\Hydra.Core.Validator\Hydra.Core.Validator.csproj" />
+   </ItemGroup>
 
 </Project>

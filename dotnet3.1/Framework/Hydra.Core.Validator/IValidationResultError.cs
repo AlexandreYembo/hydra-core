@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using Hydra.Core.Abstractions.Validations;
 
 namespace Hydra.Core.Validator
 {
-    public interface IValidationResult : IValidationResultAbstraction
+    public interface IValidationResult
     {
          IList<ValidationFailure> GetErrors();
     }

@@ -33,7 +33,7 @@ namespace Hydra.Core.Data.Context
             base.OnModelCreating(modelBuilder);
         }
         
-        public async Task<bool> Commit()
+        public virtual async Task<bool> Commit()
         {
              //ChangeTracker -> EF: change mapper
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("CreatedDate") != null))

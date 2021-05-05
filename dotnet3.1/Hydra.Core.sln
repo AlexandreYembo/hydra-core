@@ -19,12 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.EventSourcing", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Data", "Framework\Hydra.Core.Data\Hydra.Core.Data.csproj", "{9A7CD505-0661-4977-A67E-3013A02C0F6B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{641BD1E9-F8D6-42F1-A669-36794E9170F1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Example.Domain", "Examples\Hydra.Core.Example.Domain\Hydra.Core.Example.Domain.csproj", "{B7291C39-585A-4635-805A-937C084AC5D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Example.Data", "Examples\Hydra.Core.Example.Data\Hydra.Core.Example.Data.csproj", "{CAB1E4B6-8838-4905-AF62-39D392BADEFD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Domain", "Framework\Hydra.Core.Domain\Hydra.Core.Domain.csproj", "{E624F0ED-54EA-47D9-A266-B32368059971}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Specification", "Framework\Hydra.Core.Specification\Hydra.Core.Specification.csproj", "{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}"
@@ -142,30 +136,6 @@ Global
 		{9A7CD505-0661-4977-A67E-3013A02C0F6B}.Release|x64.Build.0 = Release|Any CPU
 		{9A7CD505-0661-4977-A67E-3013A02C0F6B}.Release|x86.ActiveCfg = Release|Any CPU
 		{9A7CD505-0661-4977-A67E-3013A02C0F6B}.Release|x86.Build.0 = Release|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Debug|x64.Build.0 = Debug|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Debug|x86.Build.0 = Debug|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Release|x64.ActiveCfg = Release|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Release|x64.Build.0 = Release|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Release|x86.ActiveCfg = Release|Any CPU
-		{B7291C39-585A-4635-805A-937C084AC5D0}.Release|x86.Build.0 = Release|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Debug|x64.Build.0 = Debug|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Debug|x86.Build.0 = Debug|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Release|x64.ActiveCfg = Release|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Release|x64.Build.0 = Release|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Release|x86.ActiveCfg = Release|Any CPU
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD}.Release|x86.Build.0 = Release|Any CPU
 		{E624F0ED-54EA-47D9-A266-B32368059971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E624F0ED-54EA-47D9-A266-B32368059971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E624F0ED-54EA-47D9-A266-B32368059971}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -214,9 +184,5 @@ Global
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Release|x64.Build.0 = Release|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Release|x86.ActiveCfg = Release|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Release|x86.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B7291C39-585A-4635-805A-937C084AC5D0} = {641BD1E9-F8D6-42F1-A669-36794E9170F1}
-		{CAB1E4B6-8838-4905-AF62-39D392BADEFD} = {641BD1E9-F8D6-42F1-A669-36794E9170F1}
 	EndGlobalSection
 EndGlobal

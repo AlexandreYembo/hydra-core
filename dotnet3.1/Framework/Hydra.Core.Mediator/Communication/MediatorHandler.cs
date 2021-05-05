@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Hydra.Core.Abstractions.Validations;
+using FluentValidation.Results;
 using Hydra.Core.Mediator.Abstractions.Mediator;
 using Hydra.Core.Mediator.Messages;
 using MediatR;
@@ -30,7 +30,7 @@ namespace Hydra.Core.Mediator.Communication
             await _mediator.Publish(tEvent);
         }
 
-        public async Task<IValidationResultAbstraction> SendCommand<T>(T command) where T : Command
+        public async Task<ValidationResult> SendCommand<T>(T command) where T : Command
         {
             return await _mediator.Send(command);
         }
