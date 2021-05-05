@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Domain", "Framew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Specification", "Framework\Hydra.Core.Specification\Hydra.Core.Specification.csproj", "{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Validator", "Framework\Hydra.Core.Validator\Hydra.Core.Validator.csproj", "{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Data.Query", "Framework\Hydra.Core.Data.Query\Hydra.Core.Data.Query.csproj", "{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}"
 EndProject
 Global
@@ -160,18 +158,6 @@ Global
 		{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}.Release|x64.Build.0 = Release|Any CPU
 		{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}.Release|x86.ActiveCfg = Release|Any CPU
 		{4F6AA6F7-63A7-4F69-A9A0-D617D777F6DB}.Release|x86.Build.0 = Release|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x64.Build.0 = Debug|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Debug|x86.Build.0 = Debug|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x64.ActiveCfg = Release|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x64.Build.0 = Release|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x86.ActiveCfg = Release|Any CPU
-		{136CA513-2AFE-43B6-B36F-FA078BE0C8F3}.Release|x86.Build.0 = Release|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -184,5 +170,7 @@ Global
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Release|x64.Build.0 = Release|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Release|x86.ActiveCfg = Release|Any CPU
 		{0FCA6F1C-C017-49FD-A8DF-0A01D85EEA86}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
