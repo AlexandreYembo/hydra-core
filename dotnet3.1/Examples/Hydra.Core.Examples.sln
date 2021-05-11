@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Example.Domain", "Hydra.Core.Example.Domain\Hydra.Core.Example.Domain.csproj", "{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Mediator", "..\Framework\Hydra.Core.Mediator\Hydra.Core.Mediator.csproj", "{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Example.Mediator.App", "Hydra.Core.Example.Mediator.App\Hydra.Core.Example.Mediator.App.csproj", "{32346BB8-353A-4256-9A82-52EF28B21A52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Debug|x64.Build.0 = Debug|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Debug|x86.Build.0 = Debug|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Release|x64.ActiveCfg = Release|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Release|x64.Build.0 = Release|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Release|x86.ActiveCfg = Release|Any CPU
+		{71A7105E-0ECB-4B4A-B35B-EFADA2F8DB81}.Release|x86.Build.0 = Release|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Debug|x64.Build.0 = Debug|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Debug|x86.Build.0 = Debug|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Release|x64.ActiveCfg = Release|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Release|x64.Build.0 = Release|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Release|x86.ActiveCfg = Release|Any CPU
+		{87B4FAAE-03E1-48B4-901A-5FD9D2DC43C5}.Release|x86.Build.0 = Release|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Debug|x64.Build.0 = Debug|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Debug|x86.Build.0 = Debug|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x64.ActiveCfg = Release|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x64.Build.0 = Release|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x86.ActiveCfg = Release|Any CPU
+		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
