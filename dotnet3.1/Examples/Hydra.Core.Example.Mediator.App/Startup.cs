@@ -1,4 +1,6 @@
+using FluentValidation.Results;
 using Hydra.Core.Example.Domain.Commands;
+using Hydra.Core.Example.Domain.Events.ExampleEvents;
 using Hydra.Core.Mediator.Abstractions.Mediator;
 using Hydra.Core.Mediator.Communication;
 using Hydra.Core.Mediator.Messages;
@@ -22,10 +24,14 @@ namespace Hydra.Core.Example.Mediator.App
 
         //     services.AddSingleton<IConfiguration>(provider => configuration);
             
-           services.AddScoped<IMediatorHandler, MediatorHandler>();
-           services.AddScoped<IRequestHandler<TestCommand, CommandResult<TestCommandResult>>, TestCommandHandler>();
+          services.AddScoped<IMediatorHandler, MediatorHandler>();
+          services.AddScoped<IRequestHandler<TestCommand, CommandResult<ValidationResult>>, TestCommandHandler>();
+          services.AddScoped<IRequestHandler<TestCommand2, bool>, TestCommandHandler>();
+
+          services.AddScoped<INotificationHandler<ExampleEvent>, ExampleEventHandler>();
+          services.AddScoped<INotificationHandler<ExampleEvent2>, ExampleEventHandler>();
             
-            services.AddMediatR(typeof(Startup));
+          services.AddMediatR(typeof(Startup));
         }
     }
 }

@@ -8,5 +8,6 @@ namespace Hydra.Core.Mediator.Abstractions.Mediator
     {
         Task PublishEvent<T>(T tEvent) where T : Event;
         Task<CommandResult<TResponse>> SendCommand<T, TResponse>(T command) where T : Command<TResponse>;
+        Task SendCommand<T>(T command) where T : Command;
     }
 }

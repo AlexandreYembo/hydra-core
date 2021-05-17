@@ -34,5 +34,10 @@ namespace Hydra.Core.Mediator.Communication
         {
             return await _mediator.Send(command);
         }
+
+        public async Task SendCommand<T>(T command) where T : Command
+        {
+            await _mediator.Send(command);
+        }
     }
 }

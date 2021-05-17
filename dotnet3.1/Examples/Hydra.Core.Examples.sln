@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Mediator", "..\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Example.Mediator.App", "Hydra.Core.Example.Mediator.App\Hydra.Core.Example.Mediator.App.csproj", "{32346BB8-353A-4256-9A82-52EF28B21A52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.API", "..\Framework\Hydra.Core.API\Hydra.Core.API.csproj", "{7714816E-AA1A-43BC-A173-41640CB01508}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x64.Build.0 = Release|Any CPU
 		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x86.ActiveCfg = Release|Any CPU
 		{32346BB8-353A-4256-9A82-52EF28B21A52}.Release|x86.Build.0 = Release|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Debug|x64.Build.0 = Debug|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Debug|x86.Build.0 = Debug|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Release|x64.ActiveCfg = Release|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Release|x64.Build.0 = Release|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Release|x86.ActiveCfg = Release|Any CPU
+		{7714816E-AA1A-43BC-A173-41640CB01508}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

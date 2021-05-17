@@ -14,5 +14,11 @@ namespace Hydra.Core.Mediator.Messages
             Payload = payload;
             TransactionId = Guid.NewGuid();
         }
+
+        public CommandResult(ValidationResult validationResult)
+        {
+            ValidationResult = validationResult;
+            TransactionId = Guid.NewGuid();
+        }
     }
 }
