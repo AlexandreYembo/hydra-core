@@ -26,5 +26,4 @@ jobs:
           PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Abstractions/Hydra.Core.Abstractions.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           PACKAGE_NAME: Hydra.Core.Abstractions
-          VERSION_FILE_PATH: 1.0.0-test123
           NUGET_SOURCE: https://api.nuget.org
