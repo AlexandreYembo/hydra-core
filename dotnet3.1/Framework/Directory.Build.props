@@ -1,5 +1,6 @@
 <Project>
     <PropertyGroup>
+        <version_common>1.1.0-stage1</version_common>
         <PackageIcon>hydra-logo-core-transparent-64x64.png</PackageIcon>
     </PropertyGroup>
     <ItemGroup>

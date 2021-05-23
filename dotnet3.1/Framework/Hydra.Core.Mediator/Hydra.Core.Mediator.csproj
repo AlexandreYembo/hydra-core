@@ -7,7 +7,7 @@
     <Company>Hydra</Company>
     <PackageDescription>This package is library that implements mediator!</PackageDescription>
     <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
-    <version>1.1.0-stage1</version>
+    <Version>$(version_common)</Version>
   </PropertyGroup>
 
    <ItemGroup>
