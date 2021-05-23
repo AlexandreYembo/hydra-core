@@ -3,13 +3,13 @@
   <PropertyGroup>
    <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Hydra.Core.Abstractions</PackageId>
-    <PackageIcon>hydra-logo-core-transparent-64x64.png</PackageIcon>
     <Authors>Alexandre Yembo</Authors>
     <PackageDescription>This package is an abstraction of the Hydra core library!</PackageDescription>
     <PackageProjectUrl>https://github.com/AlexandreYembo/hydra-core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageIcon>hydra-logo-core-transparent-64x64.png</PackageIcon>
+    <Version>1.1.0-stage1</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="../../hydra-logo-core-transparent-64x64.png" Pack="true" Visible="false" PackagePath=""/>
