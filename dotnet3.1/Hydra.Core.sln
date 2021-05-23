@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Abstractions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Mediator", "Framework\Hydra.Core.Mediator\Hydra.Core.Mediator.csproj", "{CCC95813-26CB-4E2F-A896-906D608813F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.EventSourcing", "Framework\Hydra.Core.EventSourcing\Hydra.Core.EventSourcing.csproj", "{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Data", "Framework\Hydra.Core.Data\Hydra.Core.Data.csproj", "{9A7CD505-0661-4977-A67E-3013A02C0F6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydra.Core.Domain", "Framework\Hydra.Core.Domain\Hydra.Core.Domain.csproj", "{E624F0ED-54EA-47D9-A266-B32368059971}"
@@ -110,18 +108,6 @@ Global
 		{CCC95813-26CB-4E2F-A896-906D608813F1}.Release|x64.Build.0 = Release|Any CPU
 		{CCC95813-26CB-4E2F-A896-906D608813F1}.Release|x86.ActiveCfg = Release|Any CPU
 		{CCC95813-26CB-4E2F-A896-906D608813F1}.Release|x86.Build.0 = Release|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Debug|x64.Build.0 = Debug|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Debug|x86.Build.0 = Debug|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Release|x64.ActiveCfg = Release|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Release|x64.Build.0 = Release|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Release|x86.ActiveCfg = Release|Any CPU
-		{71AA8457-3E4E-4E3B-8AE7-5B0D5709D1C5}.Release|x86.Build.0 = Release|Any CPU
 		{9A7CD505-0661-4977-A67E-3013A02C0F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A7CD505-0661-4977-A67E-3013A02C0F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A7CD505-0661-4977-A67E-3013A02C0F6B}.Debug|x64.ActiveCfg = Debug|Any CPU

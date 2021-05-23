@@ -31,17 +31,8 @@ namespace Hydra.Core.Example.Domain.Commands
 
         public async Task<bool> Handle(TestCommand2 request, CancellationToken cancellationToken)
         {
-            var a = "a";
-
-            return await Task.FromResult(true);
-        }
-    }
-
-    public class TestCommandHandler2 : IRequestHandler<TestCommand2, bool>
-    {
-        public Task<bool> Handle(TestCommand2 request, CancellationToken cancellationToken)
-        {
-            throw new System.NotImplementedException();
+            await _mediatorHandler.PublishEvent(new ExampleEventWithLog("AlexandreYemboEvent"));
+            return true;
         }
     }
 } 
