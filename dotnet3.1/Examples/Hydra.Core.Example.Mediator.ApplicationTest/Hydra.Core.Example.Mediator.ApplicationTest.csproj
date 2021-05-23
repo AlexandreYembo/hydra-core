@@ -4,6 +4,7 @@
     <ProjectReference Include="..\..\Framework\Hydra.Core.Mediator\Hydra.Core.Mediator.csproj" />
     <ProjectReference Include="..\Hydra.Core.Example.Domain\Hydra.Core.Example.Domain.csproj" />
     <ProjectReference Include="..\..\Framework\Hydra.Core.API\Hydra.Core.API.csproj" />
+    <ProjectReference Include="..\..\Framework\Hydra.Core.MessageBus\Hydra.Core.MessageBus.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -5,12 +5,12 @@ namespace Hydra.Core.Mediator.Messages
     //base class
     public abstract class Message
     {
-        public string MessageType { get; protected set; }
+        public string MessageType { get; set; }
         /// <summary>
         /// All command triggered has reference with Aggregation root
         /// </summary>
         /// <value></value>
-        public Guid AggregateId { get; protected set; }
+        public Guid AggregateId { get; set; }
 
         protected Message()
         {

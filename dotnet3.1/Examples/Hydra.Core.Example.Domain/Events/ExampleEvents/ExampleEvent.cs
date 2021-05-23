@@ -12,4 +12,15 @@ namespace Hydra.Core.Example.Domain.Events.ExampleEvents
             Id = id;
         }
     }
+
+    public class ExampleEventWithLog : Event
+    {
+        public string TestName { get; set; }
+
+        public ExampleEventWithLog(string testName)
+        {
+            AggregateId = Guid.NewGuid();
+            TestName = testName;
+        }
+    }
 }

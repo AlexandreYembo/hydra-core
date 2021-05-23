@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Hydra.Core.Example.Domain.Events.ExampleEvents
 {
-    public class ExampleEventHandler :
+    public class ExampleEventHandler : 
             INotificationHandler<ExampleEvent>,
             INotificationHandler<ExampleEvent2>
 

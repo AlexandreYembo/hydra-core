@@ -5,7 +5,7 @@ using Hydra.Core.Example.Domain.Commands;
 using Hydra.Core.Mediator.Abstractions.Mediator;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Hydra.Core.Example.Mediator.App
+namespace Hydra.Core.Example.Mediator.ApplicationTest
 {
     public class Program
     {
@@ -21,7 +21,7 @@ namespace Hydra.Core.Example.Mediator.App
         private static ServiceCollection RegisterStartup()
         {
             var serviceCollection = new ServiceCollection();
-            Startup.Main(serviceCollection);
+            new Startup().Main(serviceCollection);
 
             return serviceCollection;
         }

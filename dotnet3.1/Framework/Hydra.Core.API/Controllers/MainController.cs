@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using Hydra.Core.Mediator.Communication;
+using Hydra.Core.Mediator.Messages;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -31,6 +32,14 @@ namespace Hydra.Core.API.Controllers
             }
 
             return CustomResponse();
+        }
+
+        protected ActionResult CustomResponse<TResponse>(CommandResult<TResponse> commandResult)
+        {
+            if(commandResult.ValidationResult.IsValid == false){
+                return CustomResponse(commandResult.ValidationResult);
+            }
+            return CustomResponse(commandResult.Payload);
         }
 
         protected ActionResult CustomResponse(ValidationResult validationResult)
