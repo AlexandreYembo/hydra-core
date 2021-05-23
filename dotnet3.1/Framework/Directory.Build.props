@@ -1,7 +1,6 @@
 <Project>
     <PropertyGroup>
         <PackageIcon>hydra-logo-core-transparent-64x64.png</PackageIcon>
-        <version_common>1.1.0-stage2</version_common>
     </PropertyGroup>
     <ItemGroup>
         <None Include="../../hydra-logo-core-transparent-64x64.png" Pack="true" Visible="false" PackagePath=""/>

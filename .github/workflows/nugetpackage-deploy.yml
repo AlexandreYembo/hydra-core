@@ -27,4 +27,10 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           PACKAGE_NAME: Hydra.Core.Abstractions
           NUGET_SOURCE: https://api.nuget.org
-          VERSION_REGEX: ^\s*<Version>1.1.0-stage2<\/Version>\s*$
+    - name: Publish Hydra.Core.Mediator
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Mediator/Hydra.Core.Mediator.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Mediator
+          NUGET_SOURCE: https://api.nuget.org
