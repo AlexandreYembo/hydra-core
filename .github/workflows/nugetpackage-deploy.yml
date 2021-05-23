@@ -41,3 +41,45 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           PACKAGE_NAME: Hydra.Core.Domain
           NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Data
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Data/Hydra.Core.Data.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Data
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.API
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.API/Hydra.Core.API.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.API
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Data.Query
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Data.Query/Hydra.Core.Data.Query.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Data.Query
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.gRPC
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.gRPC/Hydra.Core.gRPC.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.gRPC
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.MessageBus
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.MessageBus/Hydra.Core.MessageBus.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.MessageBus
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Specification
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Specification/Hydra.Core.Specification.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Specification
+          NUGET_SOURCE: https://api.nuget.org
