@@ -16,7 +16,7 @@ jobs:
         dotnet-version: 3.1.101
     - name: Install dependencies
       run: dotnet restore
-      working-directory: ./dotnet3.1/Framework
+      working-directory: ./dotnet3.1
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Publish Hydra.Core.Abstractions
