@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/AlexandreYembo/hydra-core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
- 
+    <version> $(version_common)</version>
   </PropertyGroup>
   
 <ItemGroup>
