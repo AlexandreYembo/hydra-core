@@ -18,7 +18,7 @@ jobs:
       run: dotnet restore
       working-directory: dotnet3.1
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release /p:Version=1.0.0-stage2 --no-restore
       working-directory: dotnet3.1
     - name: Publish Hydra.Core.Abstractions
       uses: brandedoutcast/publish-nuget@v2.5.2
