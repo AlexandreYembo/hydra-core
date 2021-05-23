@@ -5,8 +5,7 @@ GIT_API_KEY="your git key"
 NUGET_SOURCE="https://api.nuget.org/v3/index.json"
 NUGET_API_KEY="your nuget key"
 
-VERSION=1.0.0-beta-$(date +'%y%m%d').3 #for each release you change csproj with version and update here.
-
+VERSION=1.0.0-beta-$(date +'%y%m%d').1 #for each release you change csproj with version and update here.
 
 # nuget delete Hydra.Core.Abstractions.1.0.1 -Source "https://api.nuget.org/v3/index.json" -apikey $NUGET_API_KEY
 
@@ -45,7 +44,6 @@ dotnet nuget push Hydra.Core.Validator/bin/Release/Hydra.Core.Validator.$VERSION
 dotnet nuget push Hydra.Core.Mediator/bin/Release/Hydra.Core.Mediator.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 dotnet nuget push Hydra.Core.Domain/bin/Release/Hydra.Core.Domain.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 dotnet nuget push Hydra.Core.Data/bin/Release/Hydra.Core.Data.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
-dotnet nuget push Hydra.Core.EventSourcing/bin/Release/Hydra.Core.EventSourcing.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 dotnet nuget push Hydra.Core.API/bin/Release/Hydra.Core.API.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 dotnet nuget push Hydra.Core.Data/bin/Release/Hydra.Core.Data.Query.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 dotnet nuget push Hydra.Core.gRPC/bin/Release/Hydra.Core.gRPC.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
@@ -58,7 +56,6 @@ dotnet nuget push Hydra.Core.Validator/bin/Release/Hydra.Core.Validator.$VERSION
 dotnet nuget push Hydra.Core.Mediator/bin/Release/Hydra.Core.Mediator.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.Domain/bin/Release/Hydra.Core.Domain.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.Data/bin/Release/Hydra.Core.Data.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
-dotnet nuget push Hydra.Core.EventSourcing/bin/Release/Hydra.Core.EventSourcing.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.API/bin/Release/Hydra.Core.API.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.Data/bin/Release/Hydra.Core.Data.Query.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.gRPC/bin/Release/Hydra.Core.gRPC.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
