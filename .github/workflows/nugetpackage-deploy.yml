@@ -18,9 +18,15 @@ jobs:
       run: dotnet restore
       working-directory: dotnet3.1
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore /p:Version=1.0.0-stage2
       working-directory: dotnet3.1
-   
+    - name: Publish Hydra.Core.Abstractions
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Abstractions/Hydra.Core.Abstractions.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Abstractions
+          NUGET_SOURCE: https://api.nuget.org
     - name: Publish Hydra.Core.Mediator
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
