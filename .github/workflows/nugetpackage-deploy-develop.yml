@@ -20,27 +20,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore /p:Version=1.0.0-stage2
       working-directory: dotnet3.1
-    - name: Publish Hydra.Core.Abstractions
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Abstractions/Hydra.Core.Abstractions.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          PACKAGE_NAME: Hydra.Core.Abstractions
-          NUGET_SOURCE: https://api.nuget.org
-    - name: Publish Hydra.Core.Mediator
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Mediator/Hydra.Core.Mediator.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          PACKAGE_NAME: Hydra.Core.Mediator
-          NUGET_SOURCE: https://api.nuget.org
-    - name: Publish Hydra.Core.Domain
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Domain/Hydra.Core.Domain.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          PACKAGE_NAME: Hydra.Core.Domain
-          NUGET_SOURCE: https://api.nuget.org
+  
     - name: Publish Hydra.Core.Data
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
