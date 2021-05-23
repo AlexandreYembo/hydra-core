@@ -9,6 +9,7 @@
     <PackageProjectUrl>https://github.com/AlexandreYembo/hydra-core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+   <VersionPrefix>$(Version)</VersionPrefix>
   </PropertyGroup>
   <ItemGroup>
     <None Include="../../hydra-logo-core-transparent-64x64.png" Pack="true" Visible="false" PackagePath=""/>
