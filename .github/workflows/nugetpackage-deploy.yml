@@ -34,3 +34,10 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           PACKAGE_NAME: Hydra.Core.Mediator
           NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Domain
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Domain/Hydra.Core.Domain.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Domain
+          NUGET_SOURCE: https://api.nuget.org
