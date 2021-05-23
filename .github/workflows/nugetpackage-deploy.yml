@@ -27,3 +27,4 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           PACKAGE_NAME: Hydra.Core.Abstractions
           NUGET_SOURCE: https://api.nuget.org
+          VERSION_REGEX: ^\s*<Version>1.1.0-stage2<\/Version>\s*$
