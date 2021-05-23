@@ -21,7 +21,7 @@ jobs:
       run: dotnet build --configuration Release /p:Version=1.0.0-stage2 --no-restore
       working-directory: dotnet3.1
     - name: Publish Hydra.Core.Abstractions
-      uses: brandedoutcast/publish-nuget@v2.5.2
+      uses: AlexandreYembo/publish-nuget@v1.0.0
       with:
           PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Abstractions/Hydra.Core.Abstractions.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
