@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
+ <Import Project="../Directory.Build.props" />
    <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Hydra.Core.Specification</PackageId>
@@ -6,6 +7,7 @@
     <Company>Hydra</Company>
     <PackageDescription>This package is a Hydra core Specification library that implements the specification pattern!</PackageDescription>
     <RepositoryUrl>https://github.com/AlexandreYembo/hydra-core</RepositoryUrl>
+    <Version>$(version_common)</Version>
   </PropertyGroup>
    <ItemGroup>
      <PackageReference Include="fluentvalidation" Version="9.0.1" />

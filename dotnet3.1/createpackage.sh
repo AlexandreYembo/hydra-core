@@ -39,7 +39,6 @@ cd Framework
 
 
 dotnet nuget push Hydra.Core.Abstractions/bin/Release/Hydra.Core.Abstractions.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
-dotnet nuget push Hydra.Core.Validator/bin/Release/Hydra.Core.Validator.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 
 dotnet nuget push Hydra.Core.Mediator/bin/Release/Hydra.Core.Mediator.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
 dotnet nuget push Hydra.Core.Domain/bin/Release/Hydra.Core.Domain.$VERSION.nupkg --api-key $GIT_API_KEY --source "https://nuget.pkg.github.com/alexandreyembo/index.json"
@@ -52,7 +51,6 @@ dotnet nuget push Hydra.Core.Specification/bin/Release/Hydra.Core.Specification.
 
 # nuget
 dotnet nuget push Hydra.Core.Abstractions/bin/Release/Hydra.Core.Abstractions.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json" 
-dotnet nuget push Hydra.Core.Validator/bin/Release/Hydra.Core.Validator.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.Mediator/bin/Release/Hydra.Core.Mediator.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.Domain/bin/Release/Hydra.Core.Domain.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"
 dotnet nuget push Hydra.Core.Data/bin/Release/Hydra.Core.Data.$VERSION.nupkg --api-key $NUGET_API_KEY --source "https://api.nuget.org/v3/index.json"

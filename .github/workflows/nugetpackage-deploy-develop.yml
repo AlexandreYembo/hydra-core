@@ -1,0 +1,85 @@
+name: Publish Packages
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Install dependencies
+      run: dotnet restore
+      working-directory: dotnet3.1
+    - name: Build
+      run: dotnet build --configuration Release --no-restore /p:Version=1.0.0-stage2
+      working-directory: dotnet3.1
+    - name: Publish Hydra.Core.Abstractions
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Abstractions/Hydra.Core.Abstractions.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Abstractions
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Mediator
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Mediator/Hydra.Core.Mediator.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Mediator
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Domain
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Domain/Hydra.Core.Domain.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Domain
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Data
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Data/Hydra.Core.Data.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Data
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.API
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.API/Hydra.Core.API.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.API
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Data.Query
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Data.Query/Hydra.Core.Data.Query.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Data.Query
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.gRPC
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.gRPC/Hydra.Core.gRPC.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.gRPC
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.MessageBus
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.MessageBus/Hydra.Core.MessageBus.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.MessageBus
+          NUGET_SOURCE: https://api.nuget.org
+    - name: Publish Hydra.Core.Specification
+      uses: brandedoutcast/publish-nuget@v2.5.2
+      with:
+          PROJECT_FILE_PATH: dotnet3.1/Framework/Hydra.Core.Specification/Hydra.Core.Specification.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: Hydra.Core.Specification
+          NUGET_SOURCE: https://api.nuget.org
