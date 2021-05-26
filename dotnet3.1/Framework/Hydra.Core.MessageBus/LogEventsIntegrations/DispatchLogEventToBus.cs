@@ -1,8 +1,8 @@
-using System;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Hydra.Core.Mediator.Integration;
 using Hydra.Core.Mediator.Messages;
+using Newtonsoft.Json;
 
 namespace Hydra.Core.MessageBus.LogEventsIntegrations
 {
@@ -17,13 +17,8 @@ namespace Hydra.Core.MessageBus.LogEventsIntegrations
 
         public async Task PublishEventIntegration<T>(T tEvent) where T : Event
         {
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-            var json = JsonSerializer.Serialize<T>(tEvent, options);
+            var json = JsonConvert.SerializeObject(tEvent);
             await _messageBus.PublishAsync(new CreateEventSourcingIntegrationEvent(tEvent.AggregateId, tEvent.MessageType, json));
-                
         }
     }
 }
